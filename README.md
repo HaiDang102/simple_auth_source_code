@@ -9,13 +9,11 @@ Part A: Basic Authentication
 1. Run the Server
 node basic_auth.js
 Server will run on: http://localhost:3000
+![alt text](<public/img/node basic_auth.js.jpg>)
 Test with Postman
 (a) Public Routes
 In file Public/img you will see results 1a.img
 GET http://localhost:3000/ → response: Welcome! Visit first public resource.
-
-GET http://localhost:3000/public → response: Welcome! Visit second public resource.
-(b) Protected Route
 
 GET http://localhost:3000/secure
 
@@ -31,16 +29,17 @@ Authorization: Basic YWRtaW46MTIzNDU=
 👉 Valid credentials:
 
 You have accessed a protected resource 🎉
-
+![alt text](public/img/1a.jpg)
 
 👉 Invalid credentials:
 
 403 Access denied.
-
+![alt text](public/img/1nhapsai.jpg)
 
 👉 No credentials:
 
 401 Authentication required.
+![alt text](public/img/1khongnhapAuthorization.jpg)
 
 ## Part B: Cookie Authentication
 1. Run the Server
@@ -53,7 +52,7 @@ mongod
 Then run:
 
 node cookie_auth.js
-
+![alt text](<public/img/node cookie_auth.js.jpg>)
 
 👉 Server will run on: http://localhost:3001
 
@@ -73,8 +72,9 @@ Body (JSON):
 
 
 👉 Response: Logged in!
+![alt text](public/img/1b.jpg)
 👉 Cookie auth_cookie_token will be set (check in Postman tab Cookies).
-
+![alt text](<public/img/show cookie Database in MongoDB.jpg>)
 (b) Access Protected Route
 
 Method: GET
@@ -84,6 +84,7 @@ URL: http://localhost:3001/profile
 👉 With valid cookie:
 
 Welcome user 1, your cookie is valid.
+![alt text](public/img/checkprofilenhapsai.jpg)
 
 
 👉 Without cookie / expired cookie (after 5 mins):
